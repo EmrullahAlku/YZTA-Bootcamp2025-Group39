@@ -94,3 +94,5 @@ Emir Yaman, 21 yaşında bir üniversite öğrencisi. Babası, okul notlarından
   - **Eylem Maddeleri**
     - Bir sonraki sprint'te, projenin somut adımlarına daha çok odaklanılacak.
     - Toplantı sıklığı arttıralacak
+
+# Sprint 3
