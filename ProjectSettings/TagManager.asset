@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Holdable
+  - Slot
+  - Interactable
   layers:
   - Default
   - TransparentFX
