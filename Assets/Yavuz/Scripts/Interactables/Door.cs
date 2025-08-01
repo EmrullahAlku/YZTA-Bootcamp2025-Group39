@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Door : Interactable_y
@@ -6,7 +7,8 @@ public class Door : Interactable_y
 
     protected override void Interact()
     {
-        if (inventory.items.BinarySearch("DoorKey") != -1)
+        Debug.Log(inventory.items.BinarySearch("DoorKey"));
+        if (inventory.SearchItem("DoorKey") != -1)
         {
             GameObject.Destroy(gameObject);
         }
