@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Door : Interactable_y
+public class Door1 : Interactable_y
 {
     [SerializeField] PlayerInventory_y inventory;
 

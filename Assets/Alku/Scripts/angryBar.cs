@@ -18,6 +18,14 @@ public class angryBar : MonoBehaviour
     void Update()
     {
         if (slider != null)
+        {
             slider.value = brokenCount;
+            if (slider.value >= slider.maxValue)
+            {
+                Debug.Log("Level 3 Bitti: Anger level maxed out!");
+                // disable this script after max reached
+                this.enabled = false;
+            }
+        }
     }
 }
