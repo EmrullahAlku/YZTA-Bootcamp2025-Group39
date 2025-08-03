@@ -10,24 +10,32 @@ Bu depo, Unity tabanlı oyun geliştirme bootcamp'inin 39. grubu için hazırlan
 - [Oyun Özellikleri](#oyun-özellikleri)
 - [Sprint 1](#sprint-1)
 - [Sprint 2](#sprint-2)
+- [Sprint 3](#sprint-3)
 
 ## Takım Üyeleri
 
 | İsim           | Rol           |
 | -------------- | ------------- |
-| Sena Nür Ünal  | Product Owner |
+| Sena Nur Ünal  | Product Owner |
 | Emrullah Alku  | Scrum Master  |
 | Furkan Beşirli | Developer     |
-| Yavuz Avcu     | Developer     |
-| İpek Demiral   | Developer     |
+| Yavuz Avcı     | Developer     |
+| İpek Demirel   | Developer     |
 
 ## Oyun Açıklaması
 
-Oyunumuz, ilerledikçe karakterlerin duygusal yolculuklarına tanıklık ettiğimiz, sürükleyici ve atmosferik bir deneyim sunuyor. Oyuncular görevlerde ilerleyek Emir’in geçmişindeki sırları gün yüzüne çıkaracak ve onun içsel dünyasında dolaşacaklar.
+Zihin Odası, tek oyunculu, psikolojik bir keşif oyunudur. Oyuncu, gerçekliğin dışında bir bilinç alanında uyanır ve parçalanmış bir zihnin içinde, duygusal olarak yüklü beş farklı odayı keşfetmeye başlar. Her oda bir duyguyu temsil eder ve oyuncu, geçmişin izleriyle yüzleşerek ilerler. Bu yolculuk sonunda oyuncunun vereceği karar, karakterin kaderini belirleyecek kadar güçlüdür.
 
 ## Oyun Hikayesi
 
-Emir Yaman, 21 yaşında bir üniversite öğrencisi. Babası, okul notlarından ve başarıdan başka hiçbir şeye değer vermez; evde konuşulan tek konu hep bu olmuştur. Emir, yıllardır bu baskının gölgesinde yaşıyor, kendini ifade etmekten çekiniyor. Ders aralarında kampüs sokaklarında yalnız başına yürürken, kalbindeki boşluğu ve umutları arasında gidip gelir.
+Derin bir sessizlik içinde gözlerini açan bir genç... Nerede olduğu belirsiz, etrafındaki dünya ise tanıdık ama bozulmuş. Sessiz odalar, eksik anılar ve yüzleşilmeyi bekleyen duygular… Oyuncu, bu bilinç alanında yol aldıkça; öfke, korku, üzüntü, mutluluk ve umutla yüzleşir. Her odada yeni bir parça açığa çıkar, her adım karakterin kimliğini ve geçmişini biraz daha anlamlandırır. Ancak bu yolculuk yalnızca keşif değil, aynı zamanda bir seçimdir: devam etmek ya da sonsuza dek durmak.
+
+## Hedef Kitle
+
+- Psikolojik temalı hikaye tabanlı oyunlara ilgi duyanlar
+- Duygusal derinliği olan deneyimler arayan yetişkin ve genç oyuncular
+- Life is Strange, What Remains of Edith Finch, Omori gibi oyunlardan hoşlananlar
+- Kısa ama anlamlı deneyimler sunan bağımsız yapımları sevenler
 
 ## Oyun Özellikleri
 
@@ -43,7 +51,7 @@ Emir Yaman, 21 yaşında bir üniversite öğrencisi. Babası, okul notlarından
 - **Daily Scrum**: Daily Scrum toplantılarının Meets ve Slack üzerinden yapıldı. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız [Imgur](https://imgur.com/a/shcnWhl)'da toplanmıştır
 - **Sprint board update**: Sprint board screenshot: ![Sprint Board Screenshot](./readME/Sprint_1/image.png)
 <details>
-<summary><strong>Oyun içi Screenshot</strong></summary>
+<summary><strong>Oyun içi Screenshotlar</strong></summary>
 
 ![Oyun İçi screenshot1](./readME/Sprint_1/ss01.jpg)
 ![Oyun İçi screenshot2](./readME/Sprint_1/ss02.png)
@@ -72,7 +80,7 @@ Emir Yaman, 21 yaşında bir üniversite öğrencisi. Babası, okul notlarından
 - **Daily Scrum**: Daily Scrum toplantılarının Meets ve Slack üzerinden yapıldı. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız [Imgur](https://imgur.com/a/WVFNq4R)'da toplanmıştır
 - **Sprint board update**: Sprint board screenshot: ![Sprint Board Screenshot](./readME/Sprint_2/image.png)
 <details>
-<summary><strong>Oyun içi Screenshot</strong></summary>
+<summary><strong>Oyun içi Screenshotlar</strong></summary>
 
 ![Oyun İçi screenshot1](./readME/Sprint_2/screenshots/game/01.png)
 ![Oyun İçi screenshot1](./readME/Sprint_2/screenshots/game/02.jpg)
@@ -96,3 +104,28 @@ Emir Yaman, 21 yaşında bir üniversite öğrencisi. Babası, okul notlarından
     - Toplantı sıklığı arttıralacak
 
 # Sprint 3
+
+- **Sprint Notları**: [Sprind Board](https://emrullahalku.atlassian.net/jira/software/projects/OGG3/boards/35?atlOrigin=eyJpIjoiYWQyMGZjZDhkYzc0NDE5NGExMGEzZDAxOWM4MGRmZWYiLCJwIjoiaiJ9)
+- **Sprint içinde tamamlanması tahmin edilen puan**: 285
+- **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. 3. sprint için bu puan 285 olarak kararlaştırılmıştır.
+- **Daily Scrum**: Daily Scrum toplantılarının Slack üzerinden yapıldı. Daily Scrum toplantılarımız ve günlük Whatsapp konuşmalarımız [Imgur](https://imgur.com/a/1lIqOGw)'da toplanmıştır.
+- **Sprint board update**: Sprint board screenshot: ![Sprint Board Screenshot](./readME/Sprint_3/image.png)
+<details>
+<summary><strong>Oyun içi Screenshotlar</strong></summary>
+
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/01.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/02.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/03.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/04.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/05.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/06.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/07.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/08.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/09.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/10.png)
+
+</details>
+
+- **Sprint Review**:
+  - Bütün ekip projede hangi kısımların bittiğini ve bunun hakkındaki görüşlerini iletti. Oyunun ilk 2 sprintinde gidişat yavaş olduğundan bu haftaya çok yük bindi. Onun dışında herhangi bir sorun ile karşılaşılmadı.
+- **Sprint Retrospective**:
