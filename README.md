@@ -22,6 +22,8 @@ Bu depo, Unity tabanlı oyun geliştirme bootcamp'inin 39. grubu için hazırlan
 | Yavuz Avcı     | Developer     |
 | İpek Demirel   | Developer     |
 
+![Oyun Logoosu](./readME/Logo.png)
+
 ## Oyun Açıklaması
 
 Zihin Odası, tek oyunculu, psikolojik bir keşif oyunudur. Oyuncu, gerçekliğin dışında bir bilinç alanında uyanır ve parçalanmış bir zihnin içinde, duygusal olarak yüklü beş farklı odayı keşfetmeye başlar. Her oda bir duyguyu temsil eder ve oyuncu, geçmişin izleriyle yüzleşerek ilerler. Bu yolculuk sonunda oyuncunun vereceği karar, karakterin kaderini belirleyecek kadar güçlüdür.
