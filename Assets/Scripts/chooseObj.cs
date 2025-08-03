@@ -134,12 +134,12 @@ public class chooseObj : MonoBehaviour
             if (goodCount > badCount)
             {
                 // load scene with build index 10 when more good objects
-                SceneManager.LoadScene(10);
+                SceneManager.LoadScene(12);
             }
             else
             {
 
-                SceneManager.LoadScene(12);
+                SceneManager.LoadScene(10);
             }
         }
     }
