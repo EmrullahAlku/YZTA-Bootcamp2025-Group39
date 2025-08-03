@@ -1,31 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;  // ← ekledik
 
 public class angryBar : MonoBehaviour
 {
-    // Tracks number of broken objects
     public static int brokenCount = 0;
-    // UI slider to display anger
     public Slider slider;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // yeni bayrak, sonraki sahnenin bir kez yüklenmesini sağlamak için
+    private bool hasLoadedNext = false;
 
-    // Update is called once per frame
     void Update()
     {
-        if (slider != null)
+        if (slider == null) return;
+
+        slider.value = brokenCount;
+
+        // yalnızca bir kez tetikle
+        if (!hasLoadedNext && slider.value >= slider.maxValue)
         {
-            slider.value = brokenCount;
-            if (slider.value >= slider.maxValue)
-            {
-                Debug.Log("Level 3 Bitti: Anger level maxed out!");
-                // disable this script after max reached
-                this.enabled = false;
-            }
+            hasLoadedNext = true;
+            Debug.Log("Level 3 Bitti: Bir sonraki sahneye geçiliyor!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

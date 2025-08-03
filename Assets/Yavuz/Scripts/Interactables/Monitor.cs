@@ -20,5 +20,13 @@ public class Monitor : Interactable_y
         screenON.SetActive(false);
         monitorSmoke.SetActive(true);
         screenShards.SetActive(true);
-    }
+        Invoke(nameof(LoadNextScene), 5f);
+        }
+
+        private void LoadNextScene()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1
+            );
+        }
 }

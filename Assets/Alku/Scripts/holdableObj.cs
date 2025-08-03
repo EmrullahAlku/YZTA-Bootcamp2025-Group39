@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class holdableObj : MonoBehaviour
 {
-    public float breakSpeed = 6f;
+    public float breakSpeed = 10f;
     public ParticleSystem breakEffect;
 
     // bu flag sayesinde bir kez kırılmış olur

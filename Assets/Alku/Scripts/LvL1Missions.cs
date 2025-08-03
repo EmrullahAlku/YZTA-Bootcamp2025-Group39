@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro; 
+using UnityEngine.SceneManagement; 
 public class LvL1Missions : MonoBehaviour
 {
     [Header("Mission Parameters")]
@@ -9,6 +10,7 @@ public class LvL1Missions : MonoBehaviour
     public bool isGoTavsan = false;
     public bool isPaintingFound = false;
     public bool IsLevelComplete => isWoodCollected && isFireLit && isGoSwim && isGoTavsan && isPaintingFound;
+    
 
     [Header("Mission Scripts")]
     [Tooltip("Camera used for raycasting to collect wood")]
@@ -78,11 +80,11 @@ public class LvL1Missions : MonoBehaviour
         if (woodStatusText != null)
             woodStatusText.text = $"Odun: {woodCollected}/{requiredWood}";
         if (fireStatusText != null)
-            fireStatusText.text = $"Ateş: {(isFireLit ? "✓" : "✗")}";
+            fireStatusText.text = $"Ates: {(isFireLit ? "✓" : "✗")}";
         if (swimStatusText != null)
-            swimStatusText.text = $"Yüzme: {(isGoSwim ? "✓" : "✗")}";
+            swimStatusText.text = $"Yuzme: {(isGoSwim ? "✓" : "✗")}";
         if (tavsanStatusText != null)
-            tavsanStatusText.text = $"Tavşan: {(isGoTavsan ? "✓" : "✗")}";
+            tavsanStatusText.text = $"Tavsan: {(isGoTavsan ? "✓" : "✗")}";
         if (paintingStatusText != null)
             paintingStatusText.text = $"Resim: {(isPaintingFound ? "✓" : "✗")}";
     }
@@ -143,6 +145,8 @@ public class LvL1Missions : MonoBehaviour
         if (IsLevelComplete)
         {
             Debug.Log("Level 1 Complete!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 
