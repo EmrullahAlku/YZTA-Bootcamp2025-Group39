@@ -131,6 +131,10 @@ Derin bir sessizlik içinde gözlerini açan bir genç... Nerede olduğu belirsi
 ![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/08.png)
 ![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/09.png)
 ![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/10.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/11.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/12.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/13.png)
+![Oyun İçi screenshot1](./readME/Sprint_3/screenshots/game/14.png)
 
 </details>
 
