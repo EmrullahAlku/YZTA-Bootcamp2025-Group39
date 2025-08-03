@@ -10,6 +10,7 @@ TagManager:
   - pickable
   - Ground
   - Mektup
+  - wood
   layers:
   - Default
   - TransparentFX

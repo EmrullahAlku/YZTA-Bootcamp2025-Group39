@@ -57,15 +57,28 @@ public class inceleme : MonoBehaviour
             currentObject.transform.Rotate(Vector3.right, -my, Space.Self);
         }
     }
-
+    [Tooltip("UI panel to show full letter when all pieces collected")]
+    public GameObject fullMektupUI; // Tam mektup prefab
     private void TryStartExamine()
     {
         Debug.Log("Attempting to start examine mode...");
         // Ekran merkezinden raycast
-        Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f));
+        Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f));
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, examineLayer))
         {
             GameObject obj = hit.collider.gameObject;
+            if (obj.CompareTag("Mektup") && toplananMektupParcalari >= 5)
+            {
+                
+            if (playerMovementScript != null) playerMovementScript.enabled = false;
+            
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+                fullMektupUI.SetActive(true); // Tam mektup prefab'ını aktif et
+                
+                Debug.Log("Cannot examine full letter, already collected all pieces.");
+                return;
+            }
             // save original world transform
             originalParent = obj.transform.parent;
             originalPosition = obj.transform.position;
@@ -87,6 +100,8 @@ public class inceleme : MonoBehaviour
         }
     }
 
+    public GameObject fullMektup;
+
     private void EndExamine()
     {
         if (currentObject == null) return;
@@ -99,6 +114,7 @@ public class inceleme : MonoBehaviour
             Destroy(currentObject);
             if (toplananMektupParcalari == 5)
             {
+                fullMektup.SetActive(true); // Tam mektup prefab'ını aktif et
                 Debug.Log("Level Ended - All letter pieces collected!");
             }
         }

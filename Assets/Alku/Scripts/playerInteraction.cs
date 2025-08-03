@@ -11,33 +11,43 @@ public class playerInteraction : MonoBehaviour
     public Camera playerCamera;
     // toggle state for movement direction
     private bool toggleMove = false;
+    // last outline component we enabled
+    private Outline lastOutline;
+
+    [SerializeField]
+    private LayerMask highlightLayers;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // no Start needed for outline; outlines are on target objects
 
     // Update is called once per frame
     void Update()
     {
-        // when S key is pressed, raycast from center of screen and move hit object on Z axis
-        if (Input.GetKeyDown(KeyCode.B))
+        // raycast each frame from screen center for outline highlighting
+        Camera cam = playerCamera != null ? playerCamera : Camera.main;
+        Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
+        RaycastHit hitInfo;
+        Outline currentOutline = null;
+        if (Physics.Raycast(ray, out hitInfo, interactRange))
         {
-            Debug.Log("B key pressed, checking for interactable objects...");
-            // use assigned playerCamera or fallback to main camera
-            Camera cam = playerCamera != null ? playerCamera : Camera.main;
-            Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, interactRange))
-            {
-                // call the interact method on any IInteractable component
-                var interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null)
-                {
-                    interactable.Interact();
-                }
-            }
+            int layer = hitInfo.collider.gameObject.layer;
+            if ((highlightLayers.value & (1 << layer)) != 0)
+                currentOutline = hitInfo.collider.GetComponent<Outline>();
+        }
+        if (lastOutline != currentOutline)
+        {
+            if (lastOutline != null)
+                lastOutline.enabled = false;
+            if (currentOutline != null)
+                currentOutline.enabled = true;
+            lastOutline = currentOutline;
+        }
+        // interaction on B key
+        if (Input.GetKeyDown(KeyCode.B) && lastOutline != null)
+        {
+            var interactable = lastOutline.GetComponent<Interactable>();
+            if (interactable != null)
+                interactable.Interact();
         }
     }
 }

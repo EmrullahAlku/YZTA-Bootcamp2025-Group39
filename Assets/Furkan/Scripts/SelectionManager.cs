@@ -27,25 +27,37 @@ public class SelectionManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-
             Destroy(gameObject);
-
         }
 
         else
         {
-
-
             Instance = this;
-
         }
     }
 
+    // last outline we enabled
+    private Outline lastOutline;
+    [Tooltip("Max distance for selection and outline raycast")]
+    public float interactRange = 30f;
     void Update()
     {
+        // unified raycast for outline and selection
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        bool hasHit = Physics.Raycast(ray, out hit, interactRange);
+        // outline toggle on Interactable layer
+        Outline currentOutline = null;
+        if (hasHit && hit.collider.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+            currentOutline = hit.collider.GetComponent<Outline>();
+        if (lastOutline != currentOutline)
+        {
+            if (lastOutline != null) lastOutline.enabled = false;
+            if (currentOutline != null) currentOutline.enabled = true;
+            lastOutline = currentOutline;
+        }
+        // selection and info UI
+        if (hasHit)
         {
             var selectionTransform = hit.transform;
 

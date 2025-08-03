@@ -11,7 +11,6 @@ public class Interactable : MonoBehaviour
     public enum InteractionType
     {
         Cekmece,
-        kitap,
         dosya,
         mektup,
         trash
@@ -39,9 +38,6 @@ public class Interactable : MonoBehaviour
             case InteractionType.Cekmece:
                 // block further interactions until animation ends
                 MoveCekmece();
-                break;
-            case InteractionType.kitap:
-                MoveBooks();
                 break;
             case InteractionType.dosya:
                 OpenFiles();
@@ -101,22 +97,8 @@ public class Interactable : MonoBehaviour
         isRunning = false;
     }
 
-    bool isBooksMoved = false;
     // state for trash movement
     private bool isTrashOpen = false;
-    private void MoveBooks()
-    {
-        if (!isBooksMoved)
-        {
-            gameObject.SetActive(false);
-            isBooksMoved = true;
-        }
-        else
-        {
-            gameObject.SetActive(true);
-            isBooksMoved = false;
-        }
-    }
 
     // …existing code…
     private Animation anim;
@@ -127,18 +109,32 @@ public class Interactable : MonoBehaviour
         anim = GetComponent<Animation>();
     }
 
+    [Tooltip("Transform of the file object to move during open/close")]
+    public Transform fileTransform;
+    [Tooltip("Distance to move the file Transform on Y axis during open/close")]
+    public float fileMoveDistance = 0.03f;
+
     private void OpenFiles()
     {
         // stop any ongoing file animation
         if (fileAnimCoroutine != null)
+        {
             StopCoroutine(fileAnimCoroutine);
+        }
 
         if (anim == null || anim.clip == null)
         {
-            Debug.LogWarning($"No Animation clip found on {name}");
             return;
         }
 
+        // move the assigned file transform up or down on Y axis
+        if (fileTransform != null)
+        {
+            Vector3 fp = fileTransform.localPosition;
+            float deltaY = isOpen ? -fileMoveDistance : fileMoveDistance;
+            fp.y += deltaY;
+            fileTransform.localPosition = fp;
+        }
         // play first half if closed, second half if already open
         fileAnimCoroutine = StartCoroutine(PlayFileHalf(isOpen));
     }
@@ -182,7 +178,6 @@ public class Interactable : MonoBehaviour
         // similar to OpenFiles, but with different animation logic
         if (anim == null || anim.clip == null)
         {
-            Debug.LogWarning($"No Animation clip found on {name}");
             return;
         }
 
