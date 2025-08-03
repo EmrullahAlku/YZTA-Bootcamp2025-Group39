@@ -7,6 +7,10 @@ TagManager:
   - Holdable
   - Slot
   - Interactable
+  - pickable
+  - Ground
+  - Mektup
+  - wood
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - UI
   - Ground
   - Interactable
-  - 
+  - Examine
   - 
   - 
   - 

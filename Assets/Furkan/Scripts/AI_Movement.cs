@@ -34,7 +34,7 @@ public class AI_Movement : MonoBehaviour
     {
         if (isWalking)
         {
-            animator.SetBool("isRunning", true);
+            //animator.SetBool("isRunning", true);
             walkCounter -= Time.deltaTime;
 
             Quaternion targetRotation = Quaternion.identity;
@@ -53,7 +53,7 @@ public class AI_Movement : MonoBehaviour
             if (walkCounter <= 0)
             {
                 isWalking = false;
-                animator.SetBool("isRunning", false);
+                //animator.SetBool("isRunning", false);
                 waitCounter = waitTime;
             }
         }
