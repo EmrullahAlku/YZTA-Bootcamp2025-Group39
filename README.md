@@ -22,6 +22,12 @@ Bu depo, Unity tabanlı oyun geliştirme bootcamp'inin 39. grubu için hazırlan
 | Yavuz Avcı     | Developer     |
 | İpek Demirel   | Developer     |
 
+## Oyun İsmi
+
+The Mind Room (Zihin Odası)
+
+## Oyun Logosu
+
 ![Oyun Logoosu](./readME/Logo.png)
 
 ## Oyun Açıklaması
